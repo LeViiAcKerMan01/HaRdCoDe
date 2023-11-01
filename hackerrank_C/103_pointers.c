@@ -1,16 +1,24 @@
-#include<stdio.h>
-int main()
-{
+#include <stdio.h>
+#include<stdlib.h>
 
 
-    int marks[1000];
-    int gender;
-    int sum;
-    int i,t;
-    while(t--){
-        scanf("%d", &i);
-        scanf("%d", &marks[i]);
-        marks[i]+=0;
-        printf("%d", marks[i]);
-    }
+
+void update(int *a,int *b) {
+  int sum,diff;
+  sum=*a+*b;
+  diff=(*a-*b);
+  *a=sum;
+  *b=abs(diff);
+    // Complete this function    
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+    return 0;
 }
