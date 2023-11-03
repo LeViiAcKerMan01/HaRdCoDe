@@ -41,5 +41,4 @@ int main(){
             cout<<"odd"<<endl;
         }
     }
-    return 0;
 }
